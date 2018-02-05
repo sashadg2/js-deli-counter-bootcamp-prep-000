@@ -11,6 +11,16 @@ function nowServing(line) {
   if (line.length > 0) {
     var result = `Currently serving ${line[0]}.`
     line.shift()
+    katzDeliLine = line
+    return result
+  }
+  else return "There is nobody waiting to be served!"
+}
+
+function currentLine(line) {
+  if (line.length > 0) {
+    var result = `Currently serving ${line[0]}.`
+    line.shift()
     return result
   }
   else return "There is nobody waiting to be served!"
