@@ -17,11 +17,12 @@ function nowServing(line) {
   else return "There is nobody waiting to be served!"
 }
 
-function currentLine(line) {
-  if (line.length > 0) {
-    var result = `Currently serving ${line[0]}.`
-    line.shift()
-    return result
+function currentLine(katzDeli) {
+   for (let i = 0; i < katzDeli.length; i++) {
+     line.push(` `+[i+1]+`. `  + katzDeli[i])
   }
-  else return "There is nobody waiting to be served!"
-}
+   if (katzDeli.length === 0) {
+     return "The line is currently empty.";
+   } else
+   return(`The line is currently:` + line);
+ }
